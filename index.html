@@ -5,8 +5,6 @@
 <meta charset="UTF-8">
 <title>Six Sins Studio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
 <style>
 
 /* CUSTOM FONT */
@@ -17,6 +15,8 @@ src: url('./CloisterBlack.ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
 }
+
+/* GENERAL */
 
 html{
 scroll-behavior:smooth;
@@ -31,7 +31,7 @@ box-sizing:border-box;
 body{
 background:black;
 color:white;
-font-family:'Playfair Display', serif;
+font-family:'CloisterBlack', serif;
 }
 
 /* NAVIGATION */
@@ -52,7 +52,8 @@ nav a{
 color:white;
 text-decoration:none;
 margin-left:30px;
-font-size:16px;
+font-size:18px;
+letter-spacing:2px;
 }
 
 nav a:hover{
@@ -79,19 +80,22 @@ width:150px;
 margin-bottom:30px;
 }
 
-/* TITLE */
+/* MAIN TITLE */
 
 h1{
 font-family:'CloisterBlack', serif;
 font-size:80px;
-letter-spacing:4px;
+letter-spacing:8px;
 margin-bottom:20px;
+font-weight:normal;
+text-shadow:0 0 2px rgba(255,255,255,0.2);
 }
 
 /* TAGLINE */
 
 .tagline{
-font-size:24px;
+font-size:28px;
+letter-spacing:2px;
 }
 
 .tagline-de{
@@ -111,22 +115,24 @@ border-top:1px solid rgba(255,255,255,0.05);
 
 .section-title{
 font-family:'CloisterBlack', serif;
-font-size:46px;
-margin-bottom:60px;
-letter-spacing:3px;
+font-size:48px;
+margin-bottom:50px;
+letter-spacing:6px;
+font-weight:normal;
 }
 
 .section-title-de{
-font-size:18px;
+font-size:16px;
 color:#aaa;
 margin-bottom:40px;
 }
 
-/* SINS */
+/* TEXT BLOCKS */
 
 .sin{
-font-size:28px;
+font-size:26px;
 margin-bottom:8px;
+letter-spacing:2px;
 }
 
 .sin span{
@@ -137,19 +143,22 @@ color:#c40000;
 font-size:16px;
 color:#aaa;
 margin-bottom:25px;
+font-family:serif;
 }
 
 /* SERVICES */
 
 .service{
-font-size:28px;
+font-size:26px;
 margin-bottom:10px;
+letter-spacing:2px;
 }
 
 .service-de{
 font-size:16px;
 color:#aaa;
 margin-bottom:25px;
+font-family:serif;
 }
 
 /* CONTACT */
@@ -157,6 +166,7 @@ margin-bottom:25px;
 .contact{
 font-size:20px;
 line-height:2;
+letter-spacing:1px;
 }
 
 .contact a{
@@ -190,7 +200,7 @@ text-decoration:none;
 
 <nav>
 
-<div style="font-family:'CloisterBlack'; font-size:22px;">
+<div style="font-size:24px; letter-spacing:3px;">
 SSS
 </div>
 
@@ -205,6 +215,7 @@ SSS
 </div>
 
 </nav>
+
 
 
 <!-- HERO -->
@@ -305,7 +316,7 @@ STORY
 Geschichte
 </div>
 
-<p style="color:#aaa;max-width:700px;">
+<p style="color:#aaa;max-width:700px;font-family:serif;">
 Future information about the story and vision of Six Sins Studio will appear here.
 </p>
 
