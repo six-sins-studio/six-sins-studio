@@ -9,11 +9,11 @@
 
 <style>
 
-/* CLOISTER BLACK */
+/* FONT */
 
-@font-face {
-font-family: 'CloisterBlack';
-src: url('CloisterBlack.ttf') format('truetype');
+@font-face{
+font-family:'CloisterBlack';
+src:url('CloisterBlack.ttf') format('truetype');
 }
 
 /* GLOBAL */
@@ -34,29 +34,55 @@ color:white;
 font-family:'EB Garamond', serif;
 }
 
-/* NAV */
+/* NAVIGATION */
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,0.95);
-padding:20px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:18px 10%;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
 z-index:100;
 }
+
+/* LOGO */
+
+.nav-logo img{
+height:38px;
+}
+
+/* MENU */
 
 nav a{
 color:white;
 text-decoration:none;
 margin-left:30px;
 font-size:20px;
+position:relative;
+transition:0.3s;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:1px;
+background:#c40000;
+transition:0.3s;
 }
 
 nav a:hover{
 color:#c40000;
+}
+
+nav a:hover::after{
+width:100%;
 }
 
 /* HERO */
@@ -71,7 +97,7 @@ background:radial-gradient(circle,#2b0000,#000);
 }
 
 .hero-content{
-margin-top:80px;
+margin-top:60px;
 }
 
 .logo{
@@ -79,26 +105,25 @@ width:150px;
 margin-bottom:30px;
 }
 
-/* TITLES */
+/* TITLE */
 
 h1{
 font-family:'CloisterBlack';
-font-size:80px;
+font-size:82px;
 letter-spacing:10px;
 margin-bottom:20px;
 }
 
-.section-title{
-font-family:'CloisterBlack';
-font-size:46px;
-margin-bottom:30px;
-letter-spacing:6px;
+/* TAGLINE */
+
+.tagline{
+font-size:26px;
 }
 
-.section-title-de{
+.tagline-de{
 font-size:18px;
 color:rgba(255,255,255,0.6);
-margin-bottom:40px;
+margin-top:5px;
 }
 
 /* SECTIONS */
@@ -108,17 +133,32 @@ padding:120px 15%;
 border-top:1px solid rgba(255,255,255,0.05);
 }
 
-/* SIX SINS LUXURY */
+/* TITLES */
+
+.section-title{
+font-family:'CloisterBlack';
+font-size:46px;
+letter-spacing:6px;
+margin-bottom:25px;
+}
+
+.section-title-de{
+font-size:18px;
+color:rgba(255,255,255,0.6);
+margin-bottom:40px;
+}
+
+/* SIX SINS */
 
 .sin-block{
 border-left:2px solid #c40000;
 padding-left:20px;
-margin-bottom:25px;
+margin-bottom:24px;
 }
 
 .sin{
 font-size:28px;
-margin-bottom:2px;
+margin-bottom:3px;
 }
 
 .sin span{
@@ -138,7 +178,7 @@ color:#c40000;
 
 .service{
 font-size:28px;
-margin-bottom:2px;
+margin-bottom:3px;
 }
 
 .service-de{
@@ -150,16 +190,18 @@ margin-bottom:18px;
 /* STORY */
 
 p{
-font-size:18px;
-line-height:1.5;
-color:rgba(255,255,255,0.6);
+font-size:19px;
+line-height:1.6;
+color:rgba(255,255,255,0.65);
+max-width:700px;
+margin-bottom:40px;
 }
 
 /* CONTACT */
 
 .contact{
 font-size:20px;
-line-height:1.3;
+line-height:1.4;
 }
 
 .contact a{
@@ -187,11 +229,14 @@ text-decoration:none;
 
 <body>
 
+<!-- NAVIGATION -->
 
 <nav>
 
-<div style="font-family:CloisterBlack;font-size:28px;">
-SSS
+<div class="nav-logo">
+<a href="#home">
+<img src="logo.png" alt="Six Sins Studio">
+</a>
 </div>
 
 <div>
@@ -205,6 +250,7 @@ SSS
 </nav>
 
 
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -214,14 +260,20 @@ SSS
 
 <h1>SIX SINS STUDIO</h1>
 
-<div style="font-size:26px;">With passion to success</div>
-<div style="font-size:18px;color:rgba(255,255,255,0.6);">Mit Leidenschaft zum Erfolg</div>
+<div class="tagline">
+With passion to success
+</div>
+
+<div class="tagline-de">
+Mit Leidenschaft zum Erfolg
+</div>
 
 </div>
 
 </section>
 
 
+<!-- SIX SINS -->
 
 <section class="section" id="success">
 
@@ -230,41 +282,43 @@ THE SIX SINS OF SUCCESS
 </div>
 
 <div class="section-title-de">
-DIE SECHS SÜNDEN DES ERFOLGS</div>
+Die sechs Sünden des Erfolgs
+</div>
 
 <div class="sin-block">
-<div class="sin"><span>DESIRE</span> — Your Desire creates demand</div>
-<div class="sin-de"><span>VERLANGEN</span> — Dein Verlangen erzeugt Nachfrage</div>
+<div class="sin"><span>DESIRE</span> — Desire creates demand</div>
+<div class="sin-de"><span>VERLANGEN</span> — erzeugt Nachfrage</div>
 </div>
 
 <div class="sin-block">
 <div class="sin"><span>ATTENTION</span> — Attention is the currency of growth</div>
-<div class="sin-de"><span>AUFMERKSAMKEIT</span> — Aufmerksamkeit ist die Währung des Wachstums</div>
+<div class="sin-de"><span>AUFMERKSAMKEIT</span> — ist die Währung des Wachstums</div>
 </div>
 
 <div class="sin-block">
-<div class="sin"><span>PASSION</span> — Your Passion makes establishments magnetic</div>
-<div class="sin-de"><span>LEIDENSCHAFT</span> — Deine Leidenschaft macht Lokale magnetisch</div>
+<div class="sin"><span>PASSION</span> — Passion makes brands magnetic</div>
+<div class="sin-de"><span>LEIDENSCHAFT</span> — macht Marken magnetisch</div>
 </div>
 
 <div class="sin-block">
 <div class="sin"><span>OBSESSION</span> — Passion turns into obsession</div>
-<div class="sin-de"><span>BESESSENHEIT</span> — Leidenschaft wird zur Bessesenheit</div>
+<div class="sin-de"><span>BESESSENHEIT</span> — entsteht aus Leidenschaft</div>
 </div>
 
 <div class="sin-block">
-<div class="sin"><span>CONNECTION</span> — Building longlasting connections with your Guest</div>
-<div class="sin-de"><span>VERBINDUNG</span> — Pflege langjährige Beziehungen zu deinen Gästen</div>
+<div class="sin"><span>CONNECTION</span> — People trust people</div>
+<div class="sin-de"><span>VERBINDUNG</span> — Menschen vertrauen Menschen</div>
 </div>
 
 <div class="sin-block">
-<div class="sin"><span>GROWTH</span> — Your Growth builds success</div>
-<div class="sin-de"><span>WACHSTUM</span> — Dein Wachstum bringt Erfolg</div>
+<div class="sin"><span>GROWTH</span> — Growth multiplies success</div>
+<div class="sin-de"><span>WACHSTUM</span> — vervielfacht Erfolg</div>
 </div>
 
 </section>
 
 
+<!-- SERVICES -->
 
 <section class="section" id="services">
 
@@ -277,13 +331,13 @@ Leistungen
 </div>
 
 <div class="service">Crowd Seeding</div>
-<div class="service-de">Sichtbarkeit & Kundschaftswachstum</div>
+<div class="service-de">Community Aktivierung</div>
 
 <div class="service">Guerilla Marketing</div>
-<div class="service-de">Kreative & interaktive Marketingkampagnen</div>
+<div class="service-de">Unkonventionelle Marketingkampagnen</div>
 
 <div class="service">Social Media Growth</div>
-<div class="service-de">Wachstum auf sozialen Medien</div>
+<div class="service-de">Social Media Wachstum</div>
 
 <div class="service">Google Optimization</div>
 <div class="service-de">Google Optimierung</div>
@@ -291,6 +345,7 @@ Leistungen
 </section>
 
 
+<!-- STORY -->
 
 <section class="section" id="story">
 
@@ -309,6 +364,7 @@ Future information about the story and vision of Six Sins Studio will appear her
 </section>
 
 
+<!-- CONTACT -->
 
 <section class="section" id="contact">
 
@@ -320,11 +376,9 @@ CONTACT
 Kontakt
 </div>
 
-<p class="contact-text">
+<p>
 Du möchtest deiner Leidenschaft und deinem Betrieb die Aufmerksamkeit geben, die sie verdienen?
-
-Dann ruf an oder schreib eine Email für ein unverbindliches Kennenlerngespräch.
-
+Dann ruf an oder schreibe eine Email für ein unverbindliches Kennenlerngespräch.
 Lass uns gemeinsam dein Lokal unwiderstehlich machen.
 </p>
 
@@ -334,22 +388,25 @@ Lass uns gemeinsam dein Lokal unwiderstehlich machen.
 Founder & Marketing Manager<br><br>
 
 Email<br>
-<a href="mailto:success@six-sins-studio.com">success@six-sins-studio.com</a>
+<a href="mailto:success@six-sins-studio.com">
+success@six-sins-studio.com
+</a>
 
 <br><br>
 
 Phone<br>
-<a href="tel:+4915901073748">+49 159 0107 3748</a>
+<a href="tel:+4915901073748">
++49 159 0107 3748
+</a>
 
 </div>
 
 </section>
 
 
-
 <footer>
 
-© SIX SINS STUDIO 2026
+© Six Sins Studio
 
 <br><br>
 
