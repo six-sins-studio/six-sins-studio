@@ -44,15 +44,21 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 10%;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(8px);
 z-index:100;
 }
 
 /* LOGO */
 
 .nav-logo img{
-height:38px;
+height:40px;
+transition:0.3s;
+}
+
+.nav-logo img:hover{
+transform:scale(1.1);
+filter:drop-shadow(0 0 8px #c40000);
 }
 
 /* MENU */
@@ -88,12 +94,33 @@ width:100%;
 /* HERO */
 
 .hero{
+position:relative;
 height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background:radial-gradient(circle,#2b0000,#000);
+overflow:hidden;
+}
+
+/* VIDEO */
+
+.hero video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+}
+
+.hero-overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+z-index:-1;
 }
 
 .hero-content{
@@ -105,25 +132,29 @@ width:150px;
 margin-bottom:30px;
 }
 
-/* TITLE */
+/* TITLES */
 
 h1{
 font-family:'CloisterBlack';
 font-size:82px;
 letter-spacing:10px;
-margin-bottom:20px;
+margin-bottom:10px;
 }
 
-/* TAGLINE */
+/* SUBTITLE */
+
+.subtitle{
+font-size:28px;
+margin-bottom:10px;
+}
 
 .tagline{
-font-size:26px;
+font-size:22px;
 }
 
 .tagline-de{
 font-size:18px;
-color:rgba(255,255,255,0.6);
-margin-top:5px;
+color:rgba(255,255,255,0.7);
 }
 
 /* SECTIONS */
@@ -131,6 +162,15 @@ margin-top:5px;
 .section{
 padding:120px 15%;
 border-top:1px solid rgba(255,255,255,0.05);
+
+opacity:0;
+transform:translateY(40px);
+transition:0.8s ease;
+}
+
+.section.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 /* TITLES */
@@ -139,13 +179,13 @@ border-top:1px solid rgba(255,255,255,0.05);
 font-family:'CloisterBlack';
 font-size:46px;
 letter-spacing:6px;
-margin-bottom:25px;
+margin-bottom:8px;
 }
 
 .section-title-de{
-font-size:18px;
-color:rgba(255,255,255,0.6);
-margin-bottom:40px;
+font-size:22px;
+color:rgba(255,255,255,0.7);
+margin-bottom:35px;
 }
 
 /* SIX SINS */
@@ -199,9 +239,17 @@ margin-bottom:40px;
 
 /* CONTACT */
 
+.contact-text{
+text-align:center;
+max-width:650px;
+margin:auto;
+margin-bottom:35px;
+}
+
 .contact{
 font-size:20px;
 line-height:1.4;
+text-align:center;
 }
 
 .contact a{
@@ -229,13 +277,13 @@ text-decoration:none;
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 
 <nav>
 
 <div class="nav-logo">
 <a href="#home">
-<img src="logo.png" alt="Six Sins Studio">
+<img src="logo.png">
 </a>
 </div>
 
@@ -254,11 +302,21 @@ text-decoration:none;
 
 <section class="hero" id="home">
 
+<video autoplay muted loop playsinline>
+<source src="hero.mp4" type="video/mp4">
+</video>
+
+<div class="hero-overlay"></div>
+
 <div class="hero-content">
 
 <img src="logo.png" class="logo">
 
 <h1>SIX SINS STUDIO</h1>
+
+<div class="subtitle">
+Making Hospitality Irresistible
+</div>
 
 <div class="tagline">
 With passion to success
@@ -376,12 +434,10 @@ CONTACT
 Kontakt
 </div>
 
-<p>
+<p class="contact-text">
 Du möchtest deiner Leidenschaft und deinem Betrieb die Aufmerksamkeit geben, die sie verdienen?
-  
-Dann ruf mich gerne an oder schreibe eine Email für ein unverbindliches Beratungsgespräch.
-  
-Lass uns gemeinsam mit Leidenschaft dein Lokal unwiderstehlich machen.
+Dann ruf an oder schreibe eine Email für ein unverbindliches Kennenlerngespräch.
+Lass uns gemeinsam dein Lokal unwiderstehlich machen.
 </p>
 
 <div class="contact">
@@ -390,16 +446,12 @@ Lass uns gemeinsam mit Leidenschaft dein Lokal unwiderstehlich machen.
 Founder & Marketing Manager<br><br>
 
 Email<br>
-<a href="mailto:success@six-sins-studio.com">
-success@six-sins-studio.com
-</a>
+<a href="mailto:success@six-sins-studio.com">success@six-sins-studio.com</a>
 
 <br><br>
 
 Phone<br>
-<a href="tel:+4915901073748">
-+49 159 0107 3748
-</a>
+<a href="tel:+4915901073748">+49 159 0107 3748</a>
 
 </div>
 
@@ -415,6 +467,25 @@ Phone<br>
 <a href="impressum.html">Impressum</a>
 
 </footer>
+
+
+<script>
+
+const sections=document.querySelectorAll(".section");
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("visible");
+}
+});
+});
+
+sections.forEach(section=>{
+observer.observe(section);
+});
+
+</script>
 
 </body>
 </html>
