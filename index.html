@@ -34,7 +34,7 @@ color:white;
 font-family:'EB Garamond', serif;
 }
 
-/* NAVIGATION */
+/* NAV */
 
 nav{
 position:fixed;
@@ -57,7 +57,7 @@ transition:0.3s;
 }
 
 .nav-logo img:hover{
-transform:scale(1.1);
+transform:scale(1.08);
 filter:drop-shadow(0 0 8px #c40000);
 }
 
@@ -103,9 +103,7 @@ text-align:center;
 overflow:hidden;
 }
 
-/* VIDEO */
-
-.hero video{
+.hero-video{
 position:absolute;
 top:0;
 left:0;
@@ -144,7 +142,7 @@ margin-bottom:10px;
 /* SUBTITLE */
 
 .subtitle{
-font-size:28px;
+font-size:30px;
 margin-bottom:10px;
 }
 
@@ -153,8 +151,8 @@ font-size:22px;
 }
 
 .tagline-de{
-font-size:18px;
-color:rgba(255,255,255,0.7);
+font-size:20px;
+color:rgba(255,255,255,0.75);
 }
 
 /* SECTIONS */
@@ -173,19 +171,25 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* TITLES */
+/* SECTION TITLES */
 
 .section-title{
 font-family:'CloisterBlack';
 font-size:46px;
 letter-spacing:6px;
-margin-bottom:8px;
+margin-bottom:5px;
 }
 
 .section-title-de{
-font-size:22px;
-color:rgba(255,255,255,0.7);
+font-size:26px;
+color:rgba(255,255,255,0.75);
 margin-bottom:35px;
+}
+
+/* CENTER */
+
+.center-title{
+text-align:center;
 }
 
 /* SIX SINS */
@@ -277,6 +281,7 @@ text-decoration:none;
 
 <body>
 
+
 <!-- NAV -->
 
 <nav>
@@ -302,7 +307,7 @@ text-decoration:none;
 
 <section class="hero" id="home">
 
-<video autoplay muted loop playsinline>
+<video autoplay muted loop playsinline class="hero-video">
 <source src="hero.mp4" type="video/mp4">
 </video>
 
@@ -426,11 +431,11 @@ Future information about the story and vision of Six Sins Studio will appear her
 
 <section class="section" id="contact">
 
-<div class="section-title">
+<div class="section-title center-title">
 CONTACT
 </div>
 
-<div class="section-title-de">
+<div class="section-title-de center-title">
 Kontakt
 </div>
 
@@ -460,7 +465,7 @@ Phone<br>
 
 <footer>
 
-© SIX SINS STUDIO 2026
+© Six Sins Studio
 
 <br><br>
 
