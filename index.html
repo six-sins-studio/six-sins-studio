@@ -286,6 +286,51 @@ text-align:center;
 .section-title-de{
 text-align:center;
 }  
+
+.contact-wrapper{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.contact-left{
+flex:1;
+min-width:250px;
+}
+
+.contact-right{
+flex:1;
+display:flex;
+justify-content:center;
+position:relative;
+}
+
+.contact-image{
+width:300px;
+border-radius:14px;
+box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+transition: all 0.4s ease;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+/* HOVER */
+.contact-image:hover{
+transform: scale(1.03) translateY(-5px);
+box-shadow: 0 20px 60px rgba(196,0,0,0.3);
+}
+
+/* GLOW */
+.contact-right::after{
+content:"";
+position:absolute;
+width:320px;
+height:320px;
+background: radial-gradient(circle, rgba(196,0,0,0.2), transparent 70%);
+filter: blur(40px);
+z-index:-1;
+}
   
 </style>
 
@@ -456,18 +501,32 @@ Dann ruf an oder schreibe eine Email für ein unverbindliches Kennenlerngespräc
 Lass uns gemeinsam dein Lokal unwiderstehlich machen.
 </p>
 
-<div class="contact">
+<div class="contact-wrapper">
+
+<div class="contact-left">
 
 <strong>Daria Babic</strong><br>
 Founder & Marketing Manager<br><br>
 
 Email<br>
-<a href="mailto:success@six-sins-studio.com">success@six-sins-studio.com</a>
+<a href="mailto:success@six-sins-studio.com">
+success@six-sins-studio.com
+</a>
 
 <br><br>
 
 Phone<br>
-<a href="tel:+4915901073748">+49 159 0107 3748</a>
+<a href="tel:+4915901073748">
++49 159 0107 3748
+</a>
+
+</div>
+
+<div class="contact-right">
+
+<img src="portrait.jpg" class="contact-image">
+
+</div>
 
 </div>
 
