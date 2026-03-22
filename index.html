@@ -290,46 +290,60 @@ text-align:center;
 .contact-wrapper{
 display:flex;
 align-items:center;
-justify-content:space-between;
-gap:60px;
+justify-content:center;
+gap:80px;
 flex-wrap:wrap;
+text-align:left;
 }
 
 .contact-left{
 flex:1;
 min-width:250px;
+font-size:20px;
+line-height:1.6;
+}
+
+.contact-left strong{
+font-size:24px;
+}
+
+.contact-left a{
+color:#c40000;
+text-decoration:none;
+font-size:20px;
 }
 
 .contact-right{
 flex:1;
 display:flex;
 justify-content:center;
+align-items:center;
 position:relative;
 }
 
+/* BILD */
 .contact-image{
-width:300px;
-border-radius:14px;
-box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+width:280px;
+border-radius:50%; /* RUND */
 transition: all 0.4s ease;
-border:1px solid rgba(255,255,255,0.1);
+z-index:2;
 }
 
 /* HOVER */
 .contact-image:hover{
-transform: scale(1.03) translateY(-5px);
-box-shadow: 0 20px 60px rgba(196,0,0,0.3);
+transform: scale(1.05);
 }
 
-/* GLOW */
+/* RUNDER GLOW */
 .contact-right::after{
 content:"";
 position:absolute;
 width:320px;
 height:320px;
-background: radial-gradient(circle, rgba(196,0,0,0.2), transparent 70%);
-filter: blur(40px);
-z-index:-1;
+background: radial-gradient(circle, rgba(196,0,0,0.4), transparent 70%);
+filter: blur(50px);
+border-radius:50%;
+z-index:1;
 }
   
 </style>
