@@ -193,10 +193,11 @@ text-align:left;
 flex:1;
 min-width:250px;
 font-size:22px;
-line-height:1.5;
+line-height:1.4; /* vorher größer → jetzt enger */
 display:flex;
 flex-direction:column;
 justify-content:center;
+gap:10px; /* kontrollierter Abstand */
 }
 
 .contact-left strong{
@@ -370,16 +371,21 @@ Lass uns gemeinsam dein Lokal unwiderstehlich machen.
 <div class="contact-wrapper">
 
 <div class="contact-left">
-<strong>Daria Babic</strong><br>
-Founder & Marketing Manager<br><br>
+<strong>Daria Babic</strong>
+<div class="contact-role">Founder & Marketing Manager</div>
 
+<div class="contact-block">
 Email<br>
-<a href="mailto:success@six-sins-studio.com">success@six-sins-studio.com</a>
+<a href="mailto:success@six-sins-studio.com">
+success@six-sins-studio.com
+</a>
+</div>
 
-<br><br>
-
+<div class="contact-block">
 Phone<br>
-<a href="tel:+4915901073748">+49 159 0107 3748</a>
+<a href="tel:+4915901073748">
++49 159 0107 3748
+</a>
 </div>
 
 <div class="contact-right">
