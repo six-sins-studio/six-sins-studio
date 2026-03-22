@@ -10,23 +10,14 @@
 <style>
 
 /* FONT */
-
 @font-face{
 font-family:'CloisterBlack';
 src:url('CloisterBlack.ttf') format('truetype');
 }
 
 /* GLOBAL */
-
-html{
-scroll-behavior:smooth;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+html{scroll-behavior:smooth;}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
 background:black;
@@ -35,7 +26,6 @@ font-family:'EB Garamond', serif;
 }
 
 /* NAV */
-
 nav{
 position:fixed;
 top:0;
@@ -49,19 +39,14 @@ backdrop-filter:blur(8px);
 z-index:100;
 }
 
-/* LOGO */
-
 .nav-logo img{
 height:40px;
 transition:0.3s;
 }
-
 .nav-logo img:hover{
 transform:scale(1.08);
 filter:drop-shadow(0 0 8px #c40000);
 }
-
-/* MENU */
 
 nav a{
 color:white;
@@ -71,7 +56,6 @@ font-size:20px;
 position:relative;
 transition:0.3s;
 }
-
 nav a::after{
 content:"";
 position:absolute;
@@ -82,17 +66,10 @@ height:1px;
 background:#c40000;
 transition:0.3s;
 }
-
-nav a:hover{
-color:#c40000;
-}
-
-nav a:hover::after{
-width:100%;
-}
+nav a:hover{color:#c40000;}
+nav a:hover::after{width:100%;}
 
 /* HERO */
-
 .hero{
 position:relative;
 height:100vh;
@@ -102,7 +79,6 @@ justify-content:center;
 text-align:center;
 overflow:hidden;
 }
-
 .hero-video{
 position:absolute;
 top:0;
@@ -112,7 +88,6 @@ height:100%;
 object-fit:cover;
 z-index:-2;
 }
-
 .hero-overlay{
 position:absolute;
 width:100%;
@@ -120,17 +95,8 @@ height:100%;
 background:rgba(0,0,0,0.65);
 z-index:-1;
 }
-
-.hero-content{
-margin-top:60px;
-}
-
-.logo{
-width:150px;
-margin-bottom:30px;
-}
-
-/* TITLES */
+.hero-content{margin-top:60px;}
+.logo{width:150px;margin-bottom:30px;}
 
 h1{
 font-family:'CloisterBlack';
@@ -139,49 +105,33 @@ letter-spacing:10px;
 margin-bottom:10px;
 }
 
-/* SUBTITLE */
-
-.subtitle{
-font-size:30px;
-margin-bottom:10px;
-}
-
-.tagline{
-font-size:22px;
-}
-
+.subtitle{font-size:30px;margin-bottom:10px;}
+.tagline{font-size:22px;}
 .tagline-de{
 font-size:20px;
 color:rgba(255,255,255,0.75);
 }
 
 /* SECTIONS */
-
 .section{
 padding:120px 15%;
 border-top:1px solid rgba(255,255,255,0.05);
-
 opacity:0;
 transform:translateY(40px);
 transition:0.8s ease;
 }
-
 .section.visible{
 opacity:1;
 transform:translateY(0);
 }
 
-/* SECTION TITLES */
-
-
+/* TITLES */
 .section-title{
 font-family:'CloisterBlack';
 font-size:46px;
 letter-spacing:6px;
-margin-bottom:5px;
 text-align:center;
 }
-
 .section-title-de{
 font-family:'CloisterBlack';
 font-size:26px;
@@ -190,45 +140,23 @@ margin-top:5px;
 margin-bottom:35px;
 opacity:0.8;
 }
-/* CENTER */
-
-.center-title{
-text-align:center;
-}
 
 /* SIX SINS */
-
 .sin-block{
 border-left:2px solid #c40000;
 padding-left:20px;
 margin-bottom:24px;
 }
-
-.sin{
-font-size:28px;
-margin-bottom:3px;
-}
-
-.sin span{
-color:#c40000;
-}
-
+.sin{font-size:28px;}
+.sin span{color:#c40000;}
 .sin-de{
 font-size:20px;
 color:rgba(255,255,255,0.55);
 }
-
-.sin-de span{
-color:#c40000;
-}
+.sin-de span{color:#c40000;}
 
 /* SERVICES */
-
-.service{
-font-size:28px;
-margin-bottom:3px;
-}
-
+.service{font-size:28px;}
 .service-de{
 font-size:20px;
 color:rgba(255,255,255,0.55);
@@ -236,7 +164,6 @@ margin-bottom:18px;
 }
 
 /* STORY */
-
 p{
 font-size:19px;
 line-height:1.6;
@@ -245,72 +172,44 @@ max-width:700px;
 margin-bottom:40px;
 }
 
-/* CONTACT */
-
+/* CONTACT TEXT */
 .contact-text{
 text-align:center;
 max-width:650px;
 margin:auto;
-margin-bottom:35px;
+margin-bottom:40px;
 }
 
-.contact{
-font-size:20px;
-line-height:1.4;
-text-align:center;
-}
-
-.contact a{
-color:#c40000;
-text-decoration:none;
-}
-
-/* FOOTER */
-
-footer{
-padding:60px;
-text-align:center;
-color:#777;
-border-top:1px solid rgba(255,255,255,0.05);
-}
-
-footer a{
-color:#777;
-text-decoration:none;
-}
-
-.section-title{
-text-align:center;
-}
-
-.section-title-de{
-text-align:center;
-}  
-
+/* CONTACT LAYOUT */
 .contact-wrapper{
 display:flex;
 align-items:center;
 justify-content:center;
-gap:80px;
+gap:40px; /* näher */
 flex-wrap:wrap;
-text-align:left;
+max-width:900px;
+margin:0 auto;
 }
 
 .contact-left{
 flex:1;
 min-width:250px;
-font-size:20px;
-line-height:1.6;
+font-size:22px;
+line-height:1.5;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
 .contact-left strong{
-font-size:24px;
+font-size:26px;
+margin-bottom:5px;
 }
 
 .contact-left a{
 color:#c40000;
 text-decoration:none;
-font-size:20px;
+font-size:22px;
 }
 
 .contact-right{
@@ -321,48 +220,52 @@ align-items:center;
 position:relative;
 }
 
-/* BILD */
+/* IMAGE */
 .contact-image{
-width:280px;
-border-radius:50%; /* RUND */
-transition: all 0.4s ease;
+width:260px;
+border-radius:50%;
+position:relative;
 z-index:2;
+transition:0.4s;
 }
-
-/* HOVER */
 .contact-image:hover{
-transform: scale(1.05);
+transform:scale(1.05);
 }
 
-/* RUNDER GLOW */
+/* PERFECT ROUND GLOW */
 .contact-right::after{
 content:"";
 position:absolute;
-width:320px;
-height:320px;
-background: radial-gradient(circle, rgba(196,0,0,0.4), transparent 70%);
-filter: blur(50px);
+width:280px;
+height:280px;
+background: radial-gradient(circle, rgba(196,0,0,0.7), transparent 70%);
+filter: blur(60px);
 border-radius:50%;
 z-index:1;
 }
-  
-</style>
 
+/* FOOTER */
+footer{
+padding:60px;
+text-align:center;
+color:#777;
+border-top:1px solid rgba(255,255,255,0.05);
+}
+footer a{
+color:#777;
+text-decoration:none;
+}
+
+</style>
 </head>
 
 <body>
 
-
 <!-- NAV -->
-
 <nav>
-
 <div class="nav-logo">
-<a href="#home">
-<img src="logo.png">
-</a>
+<a href="#home"><img src="logo.png"></a>
 </div>
-
 <div>
 <a href="#home">Start</a>
 <a href="#success">Success</a>
@@ -370,144 +273,34 @@ z-index:1;
 <a href="#story">Story</a>
 <a href="#contact">Contact</a>
 </div>
-
 </nav>
 
-
 <!-- HERO -->
-
 <section class="hero" id="home">
-
 <video autoplay muted loop playsinline class="hero-video">
 <source src="hero.mp4" type="video/mp4">
 </video>
-
 <div class="hero-overlay"></div>
 
 <div class="hero-content">
-
 <img src="logo.png" class="logo">
-
 <h1>Six Sins Studio</h1>
 
 <div class="subtitle">
-Make your restaurant visible, desirable and fully booked </div>
+Make your restaurant visible, desirable and fully booked
+</div>
 
 <div class="tagline">
 Mache dein Restaurant sichtbar, begehrt und ausgebucht
 </div>
-
 </div>
-
 </section>
-
-
-<!-- SIX SINS -->
-
-<section class="section" id="success">
-
-<div class="section-title">
-The Six Sins Of Success
-</div>
-
-<div class="section-title-de">
-Die sechs Sünden des Erfolgs
-</div>
-
-<div class="sin-block">
-<div class="sin"><span>DESIRE</span> — Desire creates demand</div>
-<div class="sin-de"><span>VERLANGEN</span> — erzeugt Nachfrage</div>
-</div>
-
-<div class="sin-block">
-<div class="sin"><span>ATTENTION</span> — Attention is the currency of growth</div>
-<div class="sin-de"><span>AUFMERKSAMKEIT</span> — ist die Währung des Wachstums</div>
-</div>
-
-<div class="sin-block">
-<div class="sin"><span>PASSION</span> — Passion makes brands magnetic</div>
-<div class="sin-de"><span>LEIDENSCHAFT</span> — macht Marken magnetisch</div>
-</div>
-
-<div class="sin-block">
-<div class="sin"><span>OBSESSION</span> — Passion turns into obsession</div>
-<div class="sin-de"><span>BESESSENHEIT</span> — entsteht aus Leidenschaft</div>
-</div>
-
-<div class="sin-block">
-<div class="sin"><span>CONNECTION</span> — People trust people</div>
-<div class="sin-de"><span>VERBINDUNG</span> — Menschen vertrauen Menschen</div>
-</div>
-
-<div class="sin-block">
-<div class="sin"><span>GROWTH</span> — Growth multiplies success</div>
-<div class="sin-de"><span>WACHSTUM</span> — vervielfacht Erfolg</div>
-</div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section class="section" id="services">
-
-<div class="section-title">
-Services
-</div>
-
-<div class="section-title-de">
-Leistungen
-</div>
-
-<div class="service">Crowd Seeding</div>
-<div class="service-de">Community Aktivierung</div>
-
-<div class="service">Guerilla Marketing</div>
-<div class="service-de">Unkonventionelle Marketingkampagnen</div>
-
-<div class="service">Social Media Growth</div>
-<div class="service-de">Social Media Wachstum</div>
-
-<div class="service">Google Optimization</div>
-<div class="service-de">Google Optimierung</div>
-
-</section>
-
-
-<!-- STORY -->
-
-<section class="section" id="story">
-
-<div class="section-title">
-Story
-</div>
-
-<div class="section-title-de">
-Geschichte
-</div>
-
-<p>
-We don't just do marketing - we fill your seats.
-</p>
-
-<p>
-Wir machen nicht nur Marketing - wir füllen deine Plätze.
-</p>
-
-</section>
-
 
 <!-- CONTACT -->
-
 <section class="section" id="contact">
 
-<div class="section-title center-title">
-Contact
-</div>
-
-<div class="section-title-de center-title">
-Kontakt
-</div>
+<div class="section-title">Contact</div>
+<div class="section-title-de">Kontakt</div>
 
 <p class="contact-text">
 Du möchtest deiner Leidenschaft und deinem Betrieb die Aufmerksamkeit geben, die sie verdienen?
@@ -518,50 +311,35 @@ Lass uns gemeinsam dein Lokal unwiderstehlich machen.
 <div class="contact-wrapper">
 
 <div class="contact-left">
-
-<strong>Daria Babic</strong><br>
+<strong>Daria Babic</strong>
 Founder & Marketing Manager<br><br>
 
 Email<br>
 <a href="mailto:success@six-sins-studio.com">
 success@six-sins-studio.com
-</a>
-
-<br><br>
+</a><br><br>
 
 Phone<br>
 <a href="tel:+4915901073748">
 +49 159 0107 3748
 </a>
-
 </div>
 
 <div class="contact-right">
-
 <img src="portrait.webp" class="contact-image">
-
 </div>
 
 </div>
-
 </section>
 
-
 <footer>
-
 © SIX SINS STUDIO 2026
-
 <br><br>
-
 <a href="impressum.html">Impressum</a>
-
 </footer>
 
-
 <script>
-
 const sections=document.querySelectorAll(".section");
-
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
@@ -569,11 +347,9 @@ entry.target.classList.add("visible");
 }
 });
 });
-
 sections.forEach(section=>{
 observer.observe(section);
 });
-
 </script>
 
 </body>
