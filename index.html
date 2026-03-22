@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <title>Six Sins Studio</title>
@@ -39,6 +38,7 @@ backdrop-filter:blur(8px);
 z-index:100;
 }
 
+/* LOGO */
 .nav-logo img{
 height:40px;
 transition:0.3s;
@@ -48,6 +48,7 @@ transform:scale(1.08);
 filter:drop-shadow(0 0 8px #c40000);
 }
 
+/* MENU */
 nav a{
 color:white;
 text-decoration:none;
@@ -98,6 +99,7 @@ z-index:-1;
 .hero-content{margin-top:60px;}
 .logo{width:150px;margin-bottom:30px;}
 
+/* TITLES */
 h1{
 font-family:'CloisterBlack';
 font-size:82px;
@@ -105,12 +107,10 @@ letter-spacing:10px;
 margin-bottom:10px;
 }
 
+/* SUBTITLE */
 .subtitle{font-size:30px;margin-bottom:10px;}
 .tagline{font-size:22px;}
-.tagline-de{
-font-size:20px;
-color:rgba(255,255,255,0.75);
-}
+.tagline-de{font-size:20px;color:rgba(255,255,255,0.75);}
 
 /* SECTIONS */
 .section{
@@ -125,11 +125,12 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* TITLES */
+/* SECTION TITLES */
 .section-title{
 font-family:'CloisterBlack';
 font-size:46px;
 letter-spacing:6px;
+margin-bottom:5px;
 text-align:center;
 }
 .section-title-de{
@@ -141,27 +142,23 @@ margin-bottom:35px;
 opacity:0.8;
 }
 
+/* CENTER */
+.center-title{text-align:center;}
+
 /* SIX SINS */
 .sin-block{
 border-left:2px solid #c40000;
 padding-left:20px;
 margin-bottom:24px;
 }
-.sin{font-size:28px;}
+.sin{font-size:28px;margin-bottom:3px;}
 .sin span{color:#c40000;}
-.sin-de{
-font-size:20px;
-color:rgba(255,255,255,0.55);
-}
+.sin-de{font-size:20px;color:rgba(255,255,255,0.55);}
 .sin-de span{color:#c40000;}
 
 /* SERVICES */
-.service{font-size:28px;}
-.service-de{
-font-size:20px;
-color:rgba(255,255,255,0.55);
-margin-bottom:18px;
-}
+.service{font-size:28px;margin-bottom:3px;}
+.service-de{font-size:20px;color:rgba(255,255,255,0.55);margin-bottom:18px;}
 
 /* STORY */
 p{
@@ -177,18 +174,19 @@ margin-bottom:40px;
 text-align:center;
 max-width:650px;
 margin:auto;
-margin-bottom:40px;
+margin-bottom:35px;
 }
 
-/* CONTACT LAYOUT */
+/* CONTACT – UPDATED */
 .contact-wrapper{
 display:flex;
 align-items:center;
 justify-content:center;
-gap:40px; /* näher */
+gap:40px;
 flex-wrap:wrap;
 max-width:900px;
 margin:0 auto;
+text-align:left;
 }
 
 .contact-left{
@@ -220,7 +218,6 @@ align-items:center;
 position:relative;
 }
 
-/* IMAGE */
 .contact-image{
 width:260px;
 border-radius:50%;
@@ -228,16 +225,17 @@ position:relative;
 z-index:2;
 transition:0.4s;
 }
+
 .contact-image:hover{
 transform:scale(1.05);
 }
 
-/* PERFECT ROUND GLOW */
+/* STRONG ROUND GLOW */
 .contact-right::after{
 content:"";
 position:absolute;
-width:280px;
-height:280px;
+width:300px;
+height:300px;
 background: radial-gradient(circle, rgba(196,0,0,0.7), transparent 70%);
 filter: blur(60px);
 border-radius:50%;
@@ -251,10 +249,7 @@ text-align:center;
 color:#777;
 border-top:1px solid rgba(255,255,255,0.05);
 }
-footer a{
-color:#777;
-text-decoration:none;
-}
+footer a{color:#777;text-decoration:none;}
 
 </style>
 </head>
@@ -284,6 +279,7 @@ text-decoration:none;
 
 <div class="hero-content">
 <img src="logo.png" class="logo">
+
 <h1>Six Sins Studio</h1>
 
 <div class="subtitle">
@@ -296,11 +292,74 @@ Mache dein Restaurant sichtbar, begehrt und ausgebucht
 </div>
 </section>
 
+<!-- SIX SINS -->
+<section class="section" id="success">
+<div class="section-title">The Six Sins Of Success</div>
+<div class="section-title-de">Die sechs Sünden des Erfolgs</div>
+
+<div class="sin-block">
+<div class="sin"><span>DESIRE</span> — Desire creates demand</div>
+<div class="sin-de"><span>VERLANGEN</span> — erzeugt Nachfrage</div>
+</div>
+
+<div class="sin-block">
+<div class="sin"><span>ATTENTION</span> — Attention is the currency of growth</div>
+<div class="sin-de"><span>AUFMERKSAMKEIT</span> — ist die Währung des Wachstums</div>
+</div>
+
+<div class="sin-block">
+<div class="sin"><span>PASSION</span> — Passion makes brands magnetic</div>
+<div class="sin-de"><span>LEIDENSCHAFT</span> — macht Marken magnetisch</div>
+</div>
+
+<div class="sin-block">
+<div class="sin"><span>OBSESSION</span> — Passion turns into obsession</div>
+<div class="sin-de"><span>BESESSENHEIT</span> — entsteht aus Leidenschaft</div>
+</div>
+
+<div class="sin-block">
+<div class="sin"><span>CONNECTION</span> — People trust people</div>
+<div class="sin-de"><span>VERBINDUNG</span> — Menschen vertrauen Menschen</div>
+</div>
+
+<div class="sin-block">
+<div class="sin"><span>GROWTH</span> — Growth multiplies success</div>
+<div class="sin-de"><span>WACHSTUM</span> — vervielfacht Erfolg</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+<div class="section-title">Services</div>
+<div class="section-title-de">Leistungen</div>
+
+<div class="service">Crowd Seeding</div>
+<div class="service-de">Community Aktivierung</div>
+
+<div class="service">Guerilla Marketing</div>
+<div class="service-de">Unkonventionelle Marketingkampagnen</div>
+
+<div class="service">Social Media Growth</div>
+<div class="service-de">Social Media Wachstum</div>
+
+<div class="service">Google Optimization</div>
+<div class="service-de">Google Optimierung</div>
+</section>
+
+<!-- STORY -->
+<section class="section" id="story">
+<div class="section-title">Story</div>
+<div class="section-title-de">Geschichte</div>
+
+<p>We don't just do marketing - we fill your seats.</p>
+<p>Wir machen nicht nur Marketing - wir füllen deine Plätze.</p>
+</section>
+
 <!-- CONTACT -->
 <section class="section" id="contact">
 
-<div class="section-title">Contact</div>
-<div class="section-title-de">Kontakt</div>
+<div class="section-title center-title">Contact</div>
+<div class="section-title-de center-title">Kontakt</div>
 
 <p class="contact-text">
 Du möchtest deiner Leidenschaft und deinem Betrieb die Aufmerksamkeit geben, die sie verdienen?
@@ -311,18 +370,16 @@ Lass uns gemeinsam dein Lokal unwiderstehlich machen.
 <div class="contact-wrapper">
 
 <div class="contact-left">
-<strong>Daria Babic</strong>
+<strong>Daria Babic</strong><br>
 Founder & Marketing Manager<br><br>
 
 Email<br>
-<a href="mailto:success@six-sins-studio.com">
-success@six-sins-studio.com
-</a><br><br>
+<a href="mailto:success@six-sins-studio.com">success@six-sins-studio.com</a>
+
+<br><br>
 
 Phone<br>
-<a href="tel:+4915901073748">
-+49 159 0107 3748
-</a>
+<a href="tel:+4915901073748">+49 159 0107 3748</a>
 </div>
 
 <div class="contact-right">
@@ -330,6 +387,7 @@ Phone<br>
 </div>
 
 </div>
+
 </section>
 
 <footer>
